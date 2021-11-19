@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-neptune-connection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connect to AWS Neptune from your lambda functions.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Mateen Mustafa @mateen7861",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateen7861/aws-lambda-neptune-connection.git"
+  },
   "dependencies": {
     "@types/gremlin": "^3.5.0",
     "gremlin": "^3.5.1"

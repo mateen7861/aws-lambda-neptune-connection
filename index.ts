@@ -1,7 +1,7 @@
 import { driver, process as gprocess, structure } from "gremlin";
 const Graph = structure.Graph;
 
-export default function initializeGremlinClient(endpoint: string) {
+export function connect_neptune(endpoint: string):{g:gprocess.GraphTraversalSource,conn:driver.DriverRemoteConnection} {
   let conn: driver.DriverRemoteConnection;
   let g: gprocess.GraphTraversalSource;
 
@@ -13,8 +13,6 @@ export default function initializeGremlinClient(endpoint: string) {
 
   const createRemoteConnection = () => {
     const { url, headers } = getConnectionDetails();
-
-    console.log("creating remote connection");
 
     return new driver.DriverRemoteConnection(url, {
       mimeType: "application/vnd.gremlin-v2.0+json",
